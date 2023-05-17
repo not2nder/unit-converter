@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Unidades</title>
+    <script src="scripts/script.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/png" href="assets/icons8-calculadora-100.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="Mini-Container">
+        <div class="title">
+            <h2>Tempo 
+                <i class="fa-solid fa-hourglass-half fa-2xs"></i>
+        </h2>
+        </div>
+        <div class="Units">
+            <div class="input">
+                <input type="text" id="input-time" placeholder="Valor">
+
+                <select name="Tempo-in" id="select-time">
+                    <option value="Segundos" selected>Segundos</option>
+                    <option value="Minutos">Minutos</option>
+                    <option value="Horas">Horas</option>
+                </select>
+            </div>
+            <h2>=</h2>
+            <div class="output">
+                <input type="text" id="output-time" placeholder="Valor Final" readonly>
+
+                <select name="Tempo-out" id="select-timeout">
+                    <option value="Segundos">Segundos</option>
+                    <option value="Minutos" selected>Minutos</option>
+                    <option value="Horas">Horas</option>
+                </select>
+            </div>
+        </div>
+        <div class="formula">
+            <span id="formula-time"></span>
+        </div>
+        <div class="formula">
+            <span id="formula-time1"></span>
+        </div>
+        <div class="calcAdvice" id="calcAdvice">
+            <span id="advice"> Alguns valores podem ser aproximados<br> ou arredondados</span>
+        </div>
+        <div class="buttons">
+            <button id="result-time" onclick="showResultTime()">
+                Converter
+            </button>
+            <button id="Clear-time" onclick="clearTime()">
+                Limpar
+            </button>
+            <button id="swap-Time" onclick="swapTime()">
+                Trocar
+                <i class="fa-solid fa-right-left fa-2xs"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Mini-Container">
+        <div class="title">
+            <h2>Temperatura
+            <i class="fa-solid fa-temperature-low fa-2xs"></i>
+        </h2>
+        </div>
+        <div class="Units">
+            <div class="input">
+                <input type="text" id="input-temp" placeholder="Valor">
+
+                <select name="Temp-in" id="select-temp">
+                    <option value="Celsius" selected>Celsius</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
+            </div>
+            <h2>=</h2>
+            <div class="output">
+                <input type="text" id="output-temp" placeholder="Valor Final" readonly>
+
+                <select name="Tempo-out" id="select-tempout">
+                    <option value="Celsius">Celsius</option>
+                    <option value="Fahrenheit" selected>Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
+            </div>
+        </div>
+        <div class="formula">
+            <span id="formula-temp"></span>
+        </div>
+        <div class="buttons">
+            <button id="result-time" onclick="showResultTemp()">
+                Converter
+            </button>
+            <button id="Clear-time" onclick="clearTemp()">
+                Limpar
+            </button>
+            <button id="swap-Temp" onclick="swapTemp()">
+                Trocar
+                <i class="fa-solid fa-right-left fa-2xs"></i>
+            </button>
+        </div>
+        <a href="create-scale/index.html">Nova função:a Criar escala</a>
+    </div>
+    <div class="Mini-Container">
+        <div class="title">
+            <h2>Massa
+                <i class="fa-solid fa-scale-balanced fa-2xs"></i>
+            </h2>
+        </div>
+        <div class="Units">
+            <div class="input">
+                <input type="text" id="input-heavy" placeholder="Valor">
+
+                <select name="heavy-in" id="select-heavy">
+                    <option value="kg" selected>Quilograma</option>
+                    <option value="g" >Grama</option>
+                    <option value="mg">Miligrama</option>
+                    <option value="T">Tonelada</option>
+                </select>
+            </div>
+            <h2>=</h2>
+            <div class="output">
+                <input type="text" id="output-heavy" placeholder="Valor Final" readonly>
+
+                <select name="heavy-out" id="select-heavyout">
+                    <option value="kg">Quilograma</option>
+                    <option value="g" selected>Grama</option>
+                    <option value="mg">Miligrama</option>
+                    <option value="T">Tonelada</option>
+                </select>
+            </div>
+        </div>
+        <div class="formula">
+            <span id="formula-heavy"></span>
+        </div>
+        <div class="buttons">
+            <button id="result-heavy" onclick="showResultHeavy()">
+                Converter
+            </button>
+            <button id="Clear-heavy" onclick="clearHeavy()">
+                Limpar
+            </button>
+            <button id="swap-Heav" onclick="swapHeavy()">
+                Trocar
+                <i class="fa-solid fa-right-left fa-2xs"></i>
+            </button>
+        </div>
+    </div>
+    <div class="Mini-Container">
+        <div class="title">
+            <h2>Numeros
+                <i class="fa-solid fa-calculator fa-2xs"></i>
+            </h2>
+        </div>
+        <div class="advice">
+            <i class="fa-solid fa-triangle-exclamation fa-2xs"></i>
+            <span id="advice"> Certifique-se que todos os números<br> estão representados corretamente</span>
+        </div>
+        <div class="Units">
+            <div class="input">
+                <input type="text" id="input-num" placeholder="Valor">
+
+                <select name="num-in" id="select-num">
+                    <option value="dec" selected>Decimal</option>
+                    <option value="bin">Binário</option>
+                    <option value="hex">Hexadecimal</option>
+                </select>
+            </div>
+            <h2>=</h2>
+            <div class="output">
+                <input type="text" id="output-num" placeholder="Valor Final" readonly>
+
+                <select name="num-out" id="select-numout">
+                    <option value="dec">Decimal</option>
+                    <option value="bin" selected>Binário</option>
+                    <option value="hex">Hexadecimal</option>
+                </select>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="result-num" onclick="showResultNum()">
+                Converter
+            </button>
+            <button id="Clear-num" onclick="clearNum()">
+                Limpar
+            </button>
+            <button id="swap-Num" onclick="swapNum()">
+                Trocar
+                <i class="fa-solid fa-right-left fa-2xs"></i>
+            </button>
+        </div>
+    </div>
+    <!-- <div class="Mini-Container">
+        <div class="title">
+            <h2>Armazenamento
+                <i class="fa-solid fa-database fa-2xs"></i>
+            </h2>
+        </div>
+        <div class="Units">
+            <div class="input">
+                <input type="text" id="input-data" placeholder="Valor">
+
+                <select name="data-in" id="select-data">
+                    <option value="bit">bit</option>
+                    <option value="b" selected>byte</option>
+                    <option value="kb">Kilobyte</option>
+                    <option value="mb">Megabyte</option>
+                    <option value="gb">Gigabyte</option>
+                    <option value="tb">Terabyte</option>
+                </select>
+            </div>
+            <h2>=</h2>
+            <div class="output">
+                <input type="text" id="output-data" placeholder="Valor Final" readonly>
+
+                <select name="data-out" id="select-dataout">
+                    <option value="bit">bit</option>
+                    <option value="b">byte</option>
+                    <option value="kb" selected>Kilobyte</option>
+                    <option value="mb">Megabyte</option>
+                    <option value="gb">Gigabyte</option>
+                    <option value="tb">Terabyte</option>
+                </select>
+            </div>
+        </div>
+        <div class="formula">
+            <span id="formula-data"></span>
+        </div>
+        <div class="formula">
+            <span id="formula-data1"></span>
+        </div>
+        <div class="buttons">
+            <button id="result-data" onclick="showResultData()">
+                Converter
+            </button>
+            <button id="Clear-data" onclick="clearData()">
+                Limpar
+            </button>
+            <button id="swap-data" onclick="swapData()">
+                Trocar
+                <i class="fa-solid fa-right-left fa-2xs"></i>
+            </button>
+        </div>
+    </div> -->
+</body>
+</html>

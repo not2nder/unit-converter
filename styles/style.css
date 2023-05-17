@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin: 7%;
+    margin-bottom: 56%;
+}
+
+div.Mini-Container{
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #9c9c9c;
+    margin: 6px;
+}
+
+div.title{
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    margin: 5px;
+    font-size: 23px;
+}
+
+span{
+    font-size: 12px;
+    color: #636363;
+}
+
+div.Units{
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+    margin: 12px;
+}
+
+div.input{
+    display: flex;
+    flex-direction: column;
+}
+
+div.output{
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=text]{
+    text-align: center;
+    width: 100px;
+    margin-bottom: 1px;
+}
+
+select{
+    text-align: center;
+    font-size: 12px;
+    height: 22px;
+}
+
+div.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    margin: 3px;
+    width: auto;
+    height: 30px;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+button:hover{
+    transform: scale(1.07);
+    color: white;
+    background-color: #331d4a;
+}
+
+div.formula{
+    display: flex;
+    justify-content: center;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+div.advice{
+    text-align: center;
+    background-color: #eeeeee;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 3px;
+    border: 1px solid #cfcfcf;
+    box-shadow: -4px 0px 0px 0px rgb(100, 85, 85);
+    margin-top: 7px;
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+#advice{
+    color: #5d5d5d;
+}
+
+div.calcAdvice{
+    display: none;
+}
+div.calcAdvice.active{
+    display: flex;
+    text-align: center;
+    background-color: #eeeeee;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 3px;
+    border: 1px solid #cfcfcf;
+    box-shadow: -4px 0px 0px 0px rgb(100, 85, 85);
+    margin-top: 7px;
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+
+a{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: black;
+}
+/* sk */
