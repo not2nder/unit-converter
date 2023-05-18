@@ -58,7 +58,7 @@ function confirm(){
     if (name == "" || pf == "" || pe == ""){
         errWarning.textContent = "Nenhum campo pode ficar em branco!"
         errWarning.classList.add('active')
-    } 
+    }
     else if(isNaN(pf) || isNaN(pe)){
         errWarning.textContent = "Os Valores PF/PE Devem Conter Apenas Números!"
         errWarning.classList.add('active')
