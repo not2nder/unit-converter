@@ -36,11 +36,9 @@ function seScale(scale){
     }
 }
 
-function scaleTo(tx,pfx,pex,pfy,pey){
-    var aux = tx/(pex-pfx)
-    var temp = pey-pfy
-    var res = (temp*aux)+pfy
-    return res
+function scaleTo(ty,pey,pfy,pex,pfx){
+    var temp = (((ty-pfy)/(pey-pfy))*(pex-pfx))+pfx
+    return temp
 }
 
 function confirm(){
@@ -90,6 +88,7 @@ function convert(){
 
         var pfy = scales[seScale(sc2)]["pf"]
         var pey = scales[seScale(sc2)]["pe"]
+
         out.value = scaleTo(tx,pfx,pex,pfy,pey)
     }
     else if(sc1 == scales[seScale(sc1)]["name"] && JSON.parse(localStorage.getItem(sc2))){
